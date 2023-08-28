@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Customer Churn Prediction</title>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    	<script src="../static/js/app.js"></script>
+		<link rel="stylesheet" href="../static/css/app.css">
+	</head>
+	<body>
+		<div class="img"></div>
+		<form class="form">
+			<h2>Age</h2>
+    		<input class="text-box"  type="number" id="uiAge" class="floatLabel" name="Years" value="18" min="18" max="70">
+			
+			<h2>Subscription Length (in months)</h2>
+    		<input class="text-box"  type="number" id="uiMonths" class="floatLabel" name="Months" value="1" min="1" max="24">
+			
+			<h2>Monthly Bill (in dollars)</h2>
+			<input class="text-box"  type="number" id="uiBill" class="floatLabel" name="Dollars" value="30" min="30" max="100">
+			
+			<h2>Total data Used (in GB)</h2>
+			<input class="text-box"  type="number" id="uiUsedGB" class="floatLabel" name="Dollars" value="50" min="50" max="500">
+			
+			<h2>Gender</h2>
+			<div class="switch-field">
+				<input type="radio" id="radio-male" name="uiGender" value="Male"/>
+				<label for="radio-male">Male</label>
+				<input type="radio" id="radio-female" name="uiGender" value="Female" checked/>
+				<label for="radio-female">Female</label>
+			</div>
+
+			<h2>Location</h2>
+			<div>
+  				<select class="location" name="" id="uiLocations">
+    				<option value="" disabled="disabled" selected="selected">Choose a Location</option>
+  				</select>
+			</div>
+
+			<button class="submit" onclick="onClickedEstimateChurn()" type="button">Estimate Churn</button>
+			
+			<div id="uiEstimatedChurn" class="result"><h2></h2></div>
+		</form>
+	</body>
+</html>
